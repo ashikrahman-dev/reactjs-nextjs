@@ -1,6 +1,7 @@
 import { useEffect, useState } from "react";
 import { postCategories } from "../ApiRequest/ApiRequest";
 import { NavLink } from "react-router-dom";
+import Footer from "../component/Footer";
 
 const Layout = (props) => {
 
@@ -16,7 +17,7 @@ const Layout = (props) => {
     return (
         <>
             
-            <div className="navbar bg-base-100 shadow top-0 fixed z-50">
+            <div className="navbar bg-base-100 shadow top-0 fixed z-50 bg-white">
 
                 <div className="navbar-start">
                     <div className="dropdown">
@@ -63,6 +64,8 @@ const Layout = (props) => {
 
             </div>
             {props.children}
+
+            <Footer />
         </>
     );
 };

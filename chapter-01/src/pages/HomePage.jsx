@@ -16,13 +16,13 @@ const HomePage = () => {
     }, [])
 
     return (
-        <>
+        <div className="bg-white">
             <Layout>
                 {
                     list===null ? <Loader /> : <BlogList list={list} />
                 }
             </Layout>
-        </>
+        </div>
     );
 };
 
