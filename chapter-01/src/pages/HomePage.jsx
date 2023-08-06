@@ -1,8 +1,8 @@
 import { useEffect, useState } from "react";
 import Loader from "../component/Loader";
-import BlogLIst from "../component/BlogLIst";
 import { postNewest } from "../ApiRequest/ApiRequest";
 import Layout from "../layout/layout";
+import BlogList from "../component/BlogLIst";
 
 const HomePage = () => {
 
@@ -19,7 +19,7 @@ const HomePage = () => {
         <>
             <Layout>
                 {
-                    list===null ? <Loader /> : <BlogLIst list={list} />
+                    list===null ? <Loader /> : <BlogList list={list} />
                 }
             </Layout>
         </>
