@@ -17,7 +17,7 @@ const Layout = (props) => {
     return (
         <>
             
-            <div className="navbar bg-base-100 shadow top-0 fixed z-50 bg-white">
+            <div className="navbar shadow top-0 fixed z-50 bg-white">
 
                 <div className="navbar-start">
                     <div className="dropdown">

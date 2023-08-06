@@ -9,13 +9,13 @@ const BlogList = (props) => {
                         props.list.map((item, index) => {
                             return (
                                 <>
-                                    <Link key={index.toString()} to={"/details/"+item['id']} className="card w-full bg-base-100 shadow-xl bg-white">
+                                    <Link key={index.toString()} to={"/details/"+item['id']} className="card w-full shadow-xl bg-white">
                                         <figure>
                                             <img src={item['img']} alt="image" className=" w-full" />
                                         </figure>
                                         <div className="card-body py-5 px-3">
                                             <h2 className="card-title text-xl text-cyan-700">{item['title']}</h2>
-                                            <p className=" text-sm text-cyan-900">{item['short']}</p>
+                                            <p className="text-sm text-cyan-900">{item['short']}</p>
                                         </div>
                                     </Link>
                                 </>
