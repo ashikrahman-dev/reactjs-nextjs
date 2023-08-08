@@ -1,5 +1,4 @@
 
-
 function BlogDetails(props) {
     return (
         <div className="container mx-auto my-16 p-9">

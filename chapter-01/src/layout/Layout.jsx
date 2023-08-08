@@ -2,6 +2,7 @@ import { useEffect, useState } from "react";
 import { postCategories } from "../ApiRequest/ApiRequest";
 import { NavLink } from "react-router-dom";
 import Footer from "../component/Footer";
+import Clock from "../component/Clock";
 
 const Layout = (props) => {
 
@@ -12,11 +13,12 @@ const Layout = (props) => {
             let res = await postCategories();
             SetCategories(res);
         })()
-    }, []);
+    }, [])
 
     return (
         <>
-            
+            <Clock locale="bn-BD" />
+
             <div className="navbar shadow top-0 fixed z-50 bg-white">
 
                 <div className="navbar-start">
@@ -64,11 +66,12 @@ const Layout = (props) => {
                 </div>
 
             </div>
+
             {props.children}
 
             <Footer />
         </>
-    );
+    )
 };
 
 export default Layout;
