@@ -1,6 +1,11 @@
+import Layout from "../layout/Layout";
 
 export default function Login() {
   return (
-    <div>Login</div>
+    <>
+      <Layout>
+        <div>Login</div>
+      </Layout>
+    </>
   )
 }

@@ -1,6 +1,11 @@
+import Layout from "../layout/Layout";
 
 export default function Otp() {
   return (
-    <div>Otp</div>
+    <>
+      <Layout>
+        <div>Otp</div>
+      </Layout>
+    </>
   )
 }
