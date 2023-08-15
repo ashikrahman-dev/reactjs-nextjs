@@ -5,9 +5,9 @@ export default function Homepage() {
     <>
         <Layout>
 
-        <section className='text-4xl text-fuchsia-900'>
-          Homepage
-        </section>
+          <section className='text-4xl text-fuchsia-900 min-h-screen'>
+            Homepage
+          </section>
 
         </Layout>
     </>
