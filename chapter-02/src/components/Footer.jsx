@@ -1,8 +1,8 @@
 
 export default function Footer() {
   return (
-    <footer className='container mx-auto px-[10px] sm:px-0 bg-slate-100 py-3'>
-      <div className='text-center text-sm'>Footer text.</div>
+    <footer className='px-[10px] sm:px-0 bg-slate-300 py-3'>
+      <div className='container mx-auto text-center text-sm'>Footer text.</div>
     </footer>
   )
 }

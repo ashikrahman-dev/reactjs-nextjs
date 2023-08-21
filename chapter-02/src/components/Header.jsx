@@ -2,7 +2,7 @@ import { Link } from 'react-router-dom'
 
 export default function Header() {
   return (
-    <nav>
+    <nav className='border-b'>
         <div className='container mx-auto px-[10px] sm:px-0'>
           <div className='grid grid-cols-2 items-center justify-center py-3'>
             
