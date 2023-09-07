@@ -2,7 +2,7 @@ import { Link } from "react-router-dom";
 
 export default function Card() {
     return (
-        <Link className="card-wrap border rounded-md hover:border-orange-300 transition-all delay-75 hover:shadow-md ">
+        <Link className="card-wrap border rounded-md transition-all delay-75 hover:shadow-[0_10px_40px_0_rgba(174,174,174,0.20)] ">
             <div className="card-img">
                 <img
                     src="https://placehold.co/600x400"
@@ -12,7 +12,7 @@ export default function Card() {
             </div>
             <div className="card-content px-4 pt-3 pb-5">
                 <Link>
-                    <h3 className='text-2xl font-bold text-orange-700 leading-8 mb-3 line-clamp-2 hover:text-orange-800 transition-colors delay-75'>Lorem ipsum dolor sit amet consectetur adipisicing elit. Architecto cum atque aperiam.</h3>
+                    <h3 className='text-2xl font-semibold text-gray-800 leading-8 mb-3 line-clamp-2 hover:text-orange-700 transition-colors delay-75'>Lorem ipsum dolor sit amet consectetur adipisicing elit. Architecto cum atque aperiam.</h3>
                 </Link>
                 <p className='text-base text-slate-600 line-clamp-4'>Lorem ipsum dolor sit amet consectetur adipisicing elit. Iste sit exercitationem tempore reiciendis, animi deserunt asperiores hic autem molestiae. Quos adipisci similique non placeat maxime tempore nostrum iste, assumenda illo soluta alias vero neque dolore?</p>
             </div>
