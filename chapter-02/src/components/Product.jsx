@@ -8,7 +8,7 @@ export default function Product({ product }) {
             <div className="card-img">
                 <img
                     src={product.image}
-                    alt="image"
+                    alt={product.title}
                     className="max-w-full rounded-t-md w-full"
                 />
             </div>

@@ -11,7 +11,7 @@ export default function Homepage() {
     useEffect( ()=> {
         fetchProducts()
             .then((data) => setProducts(data))
-            .catch(err => console.log(err))
+            .catch(err => setError('There was an error.'))
         }, []);
 
     let output;
