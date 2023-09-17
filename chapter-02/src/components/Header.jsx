@@ -10,7 +10,7 @@ export default function Header() {
             
             <div className='flex gap-3 align-middle justify-end'>
               <Link to={'/login'} className=' bg-orange-600 text-amber-50 py-2 text-sm font-semibold uppercase px-6 rounded hover:bg-orange-700'>Login</Link>
-              <Link to={'/cart-page'} className=' bg-orange-600 text-amber-50 py-2 text-sm font-semibold uppercase px-6 rounded hover:bg-orange-700'>View Cart</Link>
+              <Link to={'/cart-list'} className=' bg-orange-600 text-amber-50 py-2 text-sm font-semibold uppercase px-6 rounded hover:bg-orange-700'>View Cart</Link>
             </div>
           </div>
         </div>
