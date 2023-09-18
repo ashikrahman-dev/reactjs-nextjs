@@ -1,3 +1,4 @@
+/* eslint-disable no-unused-vars */
 import { useEffect, useState } from "react";
 import Product from "../components/Product";
 import Layout from "../layout/Layout";

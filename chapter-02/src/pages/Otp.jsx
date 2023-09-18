@@ -1,3 +1,4 @@
+/* eslint-disable no-unused-vars */
 import { useState } from "react";
 import Layout from "../layout/Layout";
 import verifyLogin from "../utils/verifyLogin";
