@@ -4,6 +4,7 @@ import CartItem from "../components/CartItem";
 import { useEffect, useState } from "react";
 import fetchCartList from "../utils/fetchCartList";
 import removeCart from "../utils/removeCart";
+import priceStringToNumber from "../utils/priceStringToNumber";
 
 export default function CartPage() {
     const [items, setItems] = useState([]);
@@ -33,6 +34,16 @@ export default function CartPage() {
             .catch((err) => console.log("There was an remove cart error."));
     };
 
+    const calculateTotalPrice = () => {
+        const totalPrice = items.reduce((total, currentValue) => {
+            const price = priceStringToNumber(currentValue);
+
+            return total + price;
+        }, 0);
+
+        return totalPrice.toLocaleString();
+    };
+
     return (
         <Layout>
             <section className="container mx-auto min-h-screen py-12 px-3">
@@ -52,7 +63,8 @@ export default function CartPage() {
                                 Total Item: <span className="">10</span>
                             </h3>
                             <p className="mt-4">
-                                Total price <span>$19999</span>
+                                Total price
+                                <span>${calculateTotalPrice()}</span>
                             </p>
                             <div className="flex mt-8">
                                 <button className="uppercase mt-4 text-sm font-semibold border rounded-[4px] bg-orange-100 text-orange-700 border-orange-700 py-[6px] px-3 hover:bg-orange-700 hover:text-white">
