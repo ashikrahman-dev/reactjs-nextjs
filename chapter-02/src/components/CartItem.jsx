@@ -1,32 +1,27 @@
-export default function CartItem() {
+export default function CartItem({ product }) {
+    const { title, image, price } = product || {};
+
     return (
         <>
-            <div className="card-wrap border rounded-md transition-all delay-75 hover:shadow-[0_10px_40px_0_rgba(174,174,174,0.20)] p-6">
+            <div className="card-wrap border rounded-md transition-all delay-75 hover:shadow-[0_10px_40px_0_rgba(174,174,174,0.20)] p-2 mb-7">
                 <div className="grid grid-cols-12 gap-4 items-center">
-                    <div className="col-span-4">
+                    <div className="col-span-3">
                         <div className="card-img">
                             <img
-                                src="https://placehold.co/600x400"
-                                alt="image"
+                                src={image}
+                                alt={title}
                                 className="max-w-full rounded-t-md w-full"
                             />
                         </div>
                     </div>
-                    <div className="col-span-8">
+                    <div className="col-span-9">
                         <div className="card-content px-4 pt-3 pb-5">
                             <h3 className="text-2xl font-semibold text-gray-800 leading-8 mb-3 line-clamp-2 ">
-                                Lorem ipsum dolor sit amet consectetur
-                                adipisicing.
+                                {title}
                             </h3>
-                            <p className="text-base text-slate-600 line-clamp-4">
-                                Lorem ipsum dolor sit amet consectetur
-                                adipisicing elit. Iste sit exercitationem
-                                tempore reiciendis, animi deserunt asperiores
-                                hic autem molestiae.
-                            </p>
 
                             <div className="text-base font-bold mt-3">
-                                Price: $<span>1000</span>
+                                Price: $<span>{price}</span>
                             </div>
 
                             <div className=" flex justify-end">
