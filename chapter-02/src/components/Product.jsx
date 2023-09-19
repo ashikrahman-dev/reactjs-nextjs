@@ -1,4 +1,4 @@
-import { Link } from "react-router-dom";
+/* eslint-disable no-unused-vars */
 import createCart from "../utils/careateCart";
 
 export default function Product({ product = {} }) {

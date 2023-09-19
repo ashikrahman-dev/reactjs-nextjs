@@ -1,5 +1,6 @@
-export default function CartItem({ product }) {
-    const { title, image, price } = product || {};
+/* eslint-disable react/prop-types */
+export default function CartItem({ product, remove }) {
+    const { title, image, price, id } = product || {};
 
     return (
         <>
@@ -25,7 +26,10 @@ export default function CartItem({ product }) {
                             </div>
 
                             <div className=" flex justify-end">
-                                <button className="uppercase mt-4 text-sm font-semibold border rounded-[4px] bg-orange-100 text-orange-700 border-orange-700 py-[6px] px-3 hover:bg-orange-700 hover:text-white">
+                                <button
+                                    onClick={() => remove(id)}
+                                    className="uppercase mt-4 text-sm font-semibold border rounded-[4px] bg-orange-100 text-orange-700 border-orange-700 py-[6px] px-3 hover:bg-orange-700 hover:text-white"
+                                >
                                     Remove
                                 </button>
                             </div>

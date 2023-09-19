@@ -3,6 +3,7 @@ import Layout from "../layout/Layout";
 import CartItem from "../components/CartItem";
 import { useEffect, useState } from "react";
 import fetchCartList from "../utils/fetchCartList";
+import removeCart from "../utils/removeCart";
 
 export default function CartPage() {
     const [items, setItems] = useState([]);
@@ -17,13 +18,32 @@ export default function CartPage() {
             .catch((err) => console.log("There was an Cart list error."));
     }, []);
 
+    const handleRemoveCart = (productId) => {
+        removeCart(productId)
+            .then((data) => {
+                if (data?.msg === "success") {
+                    // remove that item from my local state: items.
+                    const remainingItems = items.filter(
+                        (item) => item.product.id !== productId
+                    );
+
+                    setItems(remainingItems);
+                }
+            })
+            .catch((err) => console.log("There was an remove cart error."));
+    };
+
     return (
         <Layout>
             <section className="container mx-auto min-h-screen py-12 px-3">
                 <div className="grid grid-cols-12 gap-6">
                     <div className="col-span-8">
                         {items.map((item) => (
-                            <CartItem key={item?.id} product={item.product} />
+                            <CartItem
+                                key={item?.id}
+                                product={item.product}
+                                remove={handleRemoveCart}
+                            />
                         ))}
                     </div>
                     <div className="col-span-4">
