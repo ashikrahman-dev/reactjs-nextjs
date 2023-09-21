@@ -14,6 +14,10 @@ function FetchSWR() {
         fetcher
     );
 
+    if (error) {
+        return <div>There was an error.</div>;
+    }
+
     return (
         <>
             <h1>Get post title using SWR</h1>
