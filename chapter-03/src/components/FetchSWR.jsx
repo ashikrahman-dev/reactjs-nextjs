@@ -11,7 +11,10 @@ const fetcher = async (...args) => {
 function FetchSWR() {
     const { data, error } = useSWR(
         "https://jsonplaceholder.typicode.com/posts",
-        fetcher
+        fetcher,
+        {
+            suspense: true,
+        }
     );
 
     if (error) {
@@ -21,7 +24,7 @@ function FetchSWR() {
     return (
         <>
             <h1>Get post title using SWR</h1>
-            {data?.map((postData) => {
+            {data.map((postData) => {
                 return (
                     <h3 key={postData.id}>
                         {postData["id"]} {postData["title"]}

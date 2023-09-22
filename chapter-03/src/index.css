@@ -1,19 +1,31 @@
 body {
-  font-family: Arial, Helvetica, sans-serif;
-  padding: 10px;
+	font-family: Arial, Helvetica, sans-serif;
+	padding: 10px;
 }
 
 * {
-  margin: 0;
-  padding: 0;
+	margin: 0;
+	padding: 0;
 }
 
 h1 {
-  margin-bottom: 20px;
+	margin-bottom: 20px;
 }
 
 .divider {
-  border-bottom: 10px solid #e7e7e7;
-  padding-block: 20px;
-  margin-bottom: 30px;
+	border-bottom: 10px solid #e7e7e7;
+	padding-block: 20px;
+	margin-bottom: 30px;
+}
+
+.loading-wrap {
+	background-color: #e74c3c;
+	display: flex;
+	align-items: center;
+	justify-content: center;
+	min-height: 100vh;
+}
+
+.loading-wrap svg {
+	width: 120px;
 }
