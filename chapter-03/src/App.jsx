@@ -25,7 +25,11 @@ function App() {
 
             <Suspense fallback={<Loading />}>
                 <FetchSWR />
-            </Suspense> */}
+            </Suspense>
+            <hr />
+            <br />
+            <br />
+            <br /> */}
             <QueryClientProvider client={client}>
                 <Suspense fallback={<Loading />}>
                     <Query />
