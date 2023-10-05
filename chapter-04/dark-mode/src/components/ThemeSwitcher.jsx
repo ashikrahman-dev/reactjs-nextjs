@@ -8,7 +8,7 @@ export default function ThemeSwitcher() {
     const [theme, setTheme] = useState(null);
 
     useEffect(() => {
-        if (window.matchMedia("prefer-color-schema: dark").matches) {
+        if (window.matchMedia("prefer-color-scheme: dark").matches) {
             setTheme("dark");
         } else {
             setTheme("light");
