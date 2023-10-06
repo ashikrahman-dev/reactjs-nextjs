@@ -5,21 +5,23 @@ import DarkIcon from "./DarkIcon";
 import LightIcon from "./LightIcon";
 
 export default function ThemeSwitcher() {
-    const [theme, setTheme] = useState(null);
+    const [theme, setTheme] = useState(localStorage.getItem("theme") || null);
 
-    useEffect(() => {
-        if (window.matchMedia("prefer-color-scheme: dark").matches) {
-            setTheme("dark");
-        } else {
-            setTheme("light");
-        }
-    }, []);
+    // useEffect(() => {
+    //     if (window.matchMedia("prefer-color-scheme: dark").matches) {
+    //         setTheme("dark");
+    //     } else {
+    //         setTheme("light");
+    //     }
+    // }, []);
 
     useEffect(() => {
         if (theme === "dark") {
             document.documentElement.classList.add("dark");
+            localStorage.setItem("theme", "dark");
         } else {
             document.documentElement.classList.remove("dark");
+            localStorage.setItem("theme", "light");
         }
     }, [theme]);
 
