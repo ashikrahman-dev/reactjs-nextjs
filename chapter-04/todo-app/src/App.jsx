@@ -16,7 +16,9 @@ function App() {
 
     return (
         <div className="container mx-auto py-8">
-            <h1 className="mb-10 text-2xl">{item ? item : `React Todo App`}</h1>
+            <h1 className="mb-10 text-2xl">
+                {item ? item : `React hook Todo App`}
+            </h1>
             <h2 className="mb-10 text-2xl">{list.length}</h2>
 
             <ul>
