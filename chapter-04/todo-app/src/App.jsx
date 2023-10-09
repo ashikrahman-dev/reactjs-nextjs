@@ -1,4 +1,5 @@
 import { useState } from "react";
+import Clock from "./components/Clock";
 
 function App() {
     const [list, setList] = useState([]);
@@ -61,6 +62,9 @@ function App() {
                 >
                     Add Item
                 </button>
+            </div>
+            <div className="mt-8">
+                <Clock local="bn-BD" />
             </div>
         </div>
     );
